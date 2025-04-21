@@ -22,7 +22,7 @@ export const About = () => {
                 </div>
 
                 <img
-                    src={`${import.meta.env.BASE_URL}assets/about/about.png`}
+                    src={getImageUrl("about/about.png")}
                     alt="Developer at work"
                     className={styles.aboutImage}
                 />
