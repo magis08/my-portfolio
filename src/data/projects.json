@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "title": "PostgreSQL BREADS, Pagination, and Authentication",
+        "description": "This project implements an authentication process with BREADS functionality using ExpressJS, EJS, and a PostgreSQL database, complete with pagination features. The user interface is built using HTML and CSS.",
+        "imageSrc": "projects/postgre-breads/login.png",
+        "screenshots" : [
+            "projects/postgre-breads/login.png",
+            "projects/postgre-breads/postgresql-breads.png",
+            "projects/postgre-breads/1.png",
+            "projects/postgre-breads/2.png",
+            "projects/postgre-breads/3.png",
+            "projects/postgre-breads/4.png",
+            "projects/postgre-breads/5.png",
+            "projects/postgre-breads/6.png",
+            "projects/postgre-breads/7.png"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "MongoDB Async BREADS",
+        "description": "This project involves building an API using ExpressJS with a MongoDB database and BREADS functionality, featuring pagination implemented asynchronously with vanilla JavaScript and jQuery.",
+        "imageSrc": "projects/mongodb-breads/mongodb-breads.png",
+        "screenshots": [
+            "projects/mongodb-breads/mongodb-breads.png",
+            "projects/mongodb-breads/1.png",
+            "projects/mongodb-breads/2.png",
+            "projects/mongodb-breads/3.png",
+            "projects/mongodb-breads/4.png",
+            "projects/mongodb-breads/5.png",
+            "projects/mongodb-breads/6.png",
+            "projects/mongodb-breads/7.png",
+            "projects/mongodb-breads/8.png",
+            "projects/mongodb-breads/9.png",
+            "projects/mongodb-breads/10.png",
+            "projects/mongodb-breads/11.png",
+            "projects/mongodb-breads/12.png",
+            "projects/mongodb-breads/13.png"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Phonebook",
+        "description": "This project involves creating a phonebook application to store names, phone numbers, and photos of individuals. The application features BREADS functionality and includes pagination. The frontend is built using React.",
+        "imageSrc": "projects/react-phonebook/phonebook.png",
+        "screenshots": [
+            "projects/react-phonebook/phonebook.png",
+            "projects/react-phonebook/1.png",
+            "projects/react-phonebook/2.png",
+            "projects/react-phonebook/3.png",
+            "projects/react-phonebook/4.png",
+            "projects/react-phonebook/5.png",
+            "projects/react-phonebook/6.png",
+            "projects/react-phonebook/7.png",
+            "projects/react-phonebook/8.png",
+            "projects/react-phonebook/9.png",
+            "projects/react-phonebook/10.png",
+            "projects/react-phonebook/11.png",
+            "projects/react-phonebook/12.png",
+            "projects/react-phonebook/13.png"
+        ]
+    }    
+]

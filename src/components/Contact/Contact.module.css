@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    padding: 60px 40px;
+    gap: 40px;
+}
+
+.content {
+    flex: 1;
+    max-width: 220px;
+}
+
+.content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #d9b37d;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #b0b0b0;
+}
+
+.contact {
+    flex: 1;
+    max-width: 220px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact li {
+    margin-bottom: 12px
+}
+
+.contact a {
+    display: flex;
+    align-items: center;
+    color: #f4f4f4;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact a:hover {
+    color: #d9b37d;
+}
+
+.contact img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+}

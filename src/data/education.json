@@ -1,0 +1,20 @@
+[
+    {
+        "school": "Politeknik Manufaktur Negeri Bandung",
+        "degree": "Diploma III",
+        "major": "Mechatronics Engineering",
+        "startDate": "Aug, 2016",
+        "graduation": "Oct, 2019",
+        "description": ["Studied the integration of mechanical engineering, electronics, and programming to create automated systems. Major projects include robotics and industrial automation."],
+        "imageSrc": "education/polman.png"
+    },
+    {
+        "school": "Rubicamp",
+        "degree": "Bootcamp",
+        "major": "Fullstack Web Development",
+        "startDate": "Sept, 2024",
+        "graduation": "Feb, 2025",
+        "description": ["An intensive bootcamp in fullstack web development, covering both frontend (React) and backend (Node.js, Express, MongoDB) development."],
+        "imageSrc": "education/rubicamp.png"
+    }
+]

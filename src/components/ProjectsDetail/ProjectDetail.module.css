@@ -1,0 +1,177 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    background: linear-gradient(to bottom, #ffffff, #dfe3e6);
+    padding: 60px, 0;
+    overflow-x: hidden;
+    min-height: 91.5vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.backButton {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    margin-left: 200px;
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 48px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.backButton:hover {
+    background-color: #e5e5e5;
+    transform: translateY(1px);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-secondary);
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: var(--font-family);
+}
+
+.description {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+    color: #444;
+    padding: 10px 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.sliderContainer {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.slide {
+    position: relative;
+    text-align: center;
+}
+
+.screenshot {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.slideNumber {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #333;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+}
+
+.projectDetailContent {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f0f5ef;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projectDetailContent h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+}
+
+.projectDetailContent p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 40px 0;
+        max-height: unset;
+        min-height: auto;
+    }
+
+    .backButton {
+        margin-left: 20px;
+        font-size: 24px;
+        padding: 6px 12px;
+        border-radius: 16px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sliderContainer {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .screenshot {
+        border-radius: 8px;
+    }
+
+    .slideNumber {
+        font-size: 12px;
+        padding: 4px 8px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .projectDetailContent {
+        padding: 20px 15px;
+        border-radius: 6px;
+    }
+
+    .projectDetailContent h3 {
+        font-size: 24px;
+    }
+
+    .projectDetailContent p {
+        font-size: 14px;
+    }
+}
