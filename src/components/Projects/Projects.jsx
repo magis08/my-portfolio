@@ -17,45 +17,48 @@ export const Projects = () => {
 
     return (
         <section id="projects" className={styles.container}>
-            <h2 className={styles.title}>PROJECTS</h2>
-            <div className={styles.projectWrapper}>
-                <div className={styles.projectRowList}>
+            <h2 className={styles.title}>Projects</h2>
+            
+            <div className={styles.content}>
+                <div className={styles.projectsGrid}>
                     {projects.map((projectItem) => (
-                        <Link
-                            key={projectItem.id}
-                            to={`/projects/${projectItem.id}`}
-                            className={styles.projectCard}
-                        >
+                        <div key={projectItem.id} className={styles.projectCard}>
                             <img
                                 src={getImageUrl(projectItem.imageSrc)}
                                 alt={`${projectItem.title} Project`}
                                 className={styles.projectImage}
                             />
-                            <h3 className={styles.projectTitle}>{projectItem.title}</h3>
-                            <p className={styles.projectDescription}>{projectItem.description}</p>
-                            <span>
-                                View Details ⇨
-                            </span>
-                        </Link>
+                            <div className={styles.projectDetails}>
+                                <h3 className={styles.projectTitle}>{projectItem.title}</h3>
+                                <p className={styles.projectDescription}>{projectItem.description}</p>
+                                <Link 
+                                    to={`/projects/${projectItem.id}`}
+                                    className={styles.viewButton}
+                                >
+                                    View Details <span className={styles.arrow}>→</span>
+                                </Link>
+                            </div>
+                        </div>
                     ))}
                 </div>
-            </div>
 
-            {/* Demo Card */}
-            <div className={styles.projectCardFull}>
-                <div className={styles.projectContentFull}>
-                    <h3>{simpleProject.title}</h3>
-                    <p>{simpleProject.description}</p>
-                    <button
-                        className={styles.demoButton}
-                        onClick={() => setShowTodo(true)}
-                    >
-                        Try Now!
-                    </button>
+                {/* Demo Card - Full Width */}
+                <div className={styles.demoCard}>
+                    <div className={styles.demoContent}>
+                        <div className={styles.demoText}>
+                            <h3>{simpleProject.title}</h3>
+                            <p>{simpleProject.description}</p>
+                        </div>
+                        <button
+                            className={styles.demoButton}
+                            onClick={() => setShowTodo(true)}
+                        >
+                            Try Now!
+                        </button>
+                    </div>
                     <TodoModal isOpen={showTodo} onClose={() => setShowTodo(false)} />
                 </div>
             </div>
-
         </section>
     );
 };

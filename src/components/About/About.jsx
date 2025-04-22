@@ -5,29 +5,81 @@ import { getImageUrl } from "../../utils";
 export const About = () => {
     return (
         <section className={styles.container} id="about">
-            <h2 className={styles.title}>ABOUT</h2>
+            <h2 className={styles.title}>About Me</h2>
             <div className={styles.content}>
                 <div className={styles.textContainer}>
-                    <h3 className={styles.subheading}>Hi! I'm a Web Developer 👋</h3>
+                    <h3 className={styles.subheading}>
+                        From <span className={styles.highlight}>Mechatronics</span> to <span className={styles.highlight}>Full-Stack Development</span>
+                    </h3>
+                    
                     <p className={styles.description}>
-                        I'm a full-stack developer who loves building clean, responsive interfaces with a focus on great user experience.
-                        I enjoy working with modern frontend tools like <strong>React</strong>, and I'm currently exploring backend development using <strong>Node.js</strong> and <strong>Express</strong>.
-                        My journey started from curiosity—now it's a daily passion.
+                        As a former <strong>mechatronics engineer</strong> turned <strong>full-stack developer</strong>, 
+                        I bring a unique blend of analytical problem-solving and creative coding skills to build 
+                        robust web applications. My engineering background gives me a systems-thinking approach 
+                        to development.
                     </p>
-                    <p className={styles.description}>
-                        I'm a visual thinker and problem-solver who thrives on learning.
-                        Outside of coding, I enjoy sketching UI ideas, staying updated on web trends, and building small personal projects to improve my skills.
-                        My goal? To grow into a full-stack developer who creates digital products that feel good to use.
-                    </p>
+                    
+                    <div className={styles.skillsContainer}>
+                        <div className={styles.skillCard}>
+                            <div className={styles.skillHeader}>
+                                <img src={getImageUrl("skills/skills.gif")} alt="Frontend" className={styles.skillIcon} />
+                                <h4 className={styles.skillTitle}>Frontend</h4>
+                            </div>
+                            <ul className={styles.skillList}>
+                                <li><span className={styles.skillName}>React</span> - Hooks, Context API</li>
+                                <li><span className={styles.skillName}>JavaScript</span> - ES6+</li>
+                                <li><span className={styles.skillName}>HTML/CSS</span> - Responsive Design</li>
+                            </ul>
+                        </div>
+
+                        <div className={styles.skillCard}>
+                            <div className={styles.skillHeader}>
+                                <img src={getImageUrl("skills/skills.gif")} alt="Backend" className={styles.skillIcon} />
+                                <h4 className={styles.skillTitle}>Backend</h4>
+                            </div>
+                            <ul className={styles.skillList}>
+                                <li><span className={styles.skillName}>Node.js</span> - Runtime</li>
+                                <li><span className={styles.skillName}>Express</span> - REST APIs</li>
+                                <li><span className={styles.skillName}>Authentication</span> - JWT</li>
+                            </ul>
+                        </div>
+
+                        <div className={styles.skillCard}>
+                            <div className={styles.skillHeader}>
+                                <img src={getImageUrl("skills/database.gif")} alt="Database" className={styles.skillIcon} />
+                                <h4 className={styles.skillTitle}>Databases</h4>
+                            </div>
+                            <ul className={styles.skillList}>
+                                <li><span className={styles.skillName}>PostgreSQL</span> - Relational</li>
+                                <li><span className={styles.skillName}>MongoDB</span> - NoSQL</li>
+                                <li><span className={styles.skillName}>MySQL</span> - Query Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div className={styles.currentLearning}>
+                        <img src={getImageUrl("skills/learning.gif")} alt="Learning" className={styles.learningIcon} />
+                        <p>
+                            Currently mastering <strong>Next.js</strong> and <strong>TypeScript</strong> to build 
+                            more performant and type-safe applications.
+                        </p>
+                    </div>
                 </div>
 
-                <img
-                    src={getImageUrl("about/about.png")}
-                    alt="Developer at work"
-                    className={styles.aboutImage}
-                />
+                <div className={styles.imageSection}>
+                    <img
+                        src={getImageUrl("about/about.png")}
+                        alt="Developer at work"
+                        className={styles.aboutImage}
+                    />
+                    <div className={styles.quoteCard}>
+                        <div className={styles.quoteContent}>
+                            "I approach coding with the same precision I used in mechanical systems"
+                        </div>
+                        <div className={styles.quoteAuthor}>- Agis, Developer</div>
+                    </div>
+                </div>
             </div>
-
         </section>
     );
 };

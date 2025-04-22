@@ -39,33 +39,43 @@ export const TodoModal = ({ isOpen, onClose }) => {
         <div className={styles.modalOverlay}>
             <div className={styles.modalContent}>
                 <div className={styles.modalHeader}>
-                    <h2>To-Do List</h2>
-                    <img
-                        className={styles.closeBtn}
-                        src={getImageUrl("nav/close.png")}
-                        alt="close"
-                        onClick={onClose}
-                    />
+                    <h2 className={styles.modalTitle}>To-Do List</h2>
+                    <button className={styles.closeBtn} onClick={onClose}>
+                        <img
+                            src={getImageUrl("nav/close.png")}
+                            alt="close"
+                            className={styles.closeIcon}
+                        />
+                    </button>
                 </div>
                 <div className={styles.inputArea}>
                     <input
                         type="text"
-                        placeholder="write the task..."
+                        placeholder="Write your task..."
                         value={newTask}
                         onChange={(e) => setNewTask(e.target.value)}
+                        className={styles.taskInput}
+                        onKeyPress={(e) => e.key === 'Enter' && addTask()}
                     />
-                    <button onClick={addTask}>Add</button>
+                    <button onClick={addTask} className={styles.addButton}>
+                        Add Task
+                    </button>
                 </div>
                 <ul className={styles.taskList}>
                     {tasks.map((task, index) => (
-                        <li key={index}>
+                        <li key={index} className={styles.taskItem}>
                             <span
-                                className={task.completed ? "done" : ""}
+                                className={`${styles.taskText} ${task.completed ? styles.completed : ''}`}
                                 onClick={() => toggleTask(index)}
                             >
                                 {task.text}
                             </span>
-                            <button className={styles.deleteBtn} onClick={() => deleteTask(index)}>Delete</button>
+                            <button 
+                                className={styles.deleteButton}
+                                onClick={() => deleteTask(index)}
+                            >
+                                Delete
+                            </button>
                         </li>
                     ))}
                 </ul>

@@ -2,7 +2,7 @@
 
 .container {
     position: relative;
-    background: linear-gradient(to bottom, #ffffff, #dfe3e6);
+    background: #f8fafc;
     padding: 60px 0;
     overflow-x: hidden;
     min-height: 100vh;
@@ -12,168 +12,194 @@
 }
 
 .title {
-    color: var(--color-secondary);
-    text-align: center;
-    font-size: 48px;
-    font-weight: 800;
-    padding-top: 60px;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
+    color: #1a1a1a;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
     font-family: var(--font-family);
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
 }
 
-.projectWrapper {
-    width: 90%;
+.title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #b67c2a;
+    margin: 20px auto 0;
+}
+
+.content {
+    width: 100vw;
+    max-width: 1400px;
     margin: 0 auto;
-    overflow-x: auto;
+    padding: 0 60px;
 }
 
-.projectRowList {
-    display: flex;
-    flex-direction: row;
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
-    scroll-behavior: smooth;
-    padding-bottom: 40px;
-    width: 100%;
+    margin-bottom: 50px;
 }
 
 .projectCard {
-    text-decoration: none;
-    min-width: 400px;
-    flex: 0 0 auto;
-    background-color: #e8f5e9;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    width: 32%;
-    box-sizing: border-box;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projectCard:hover {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    transform: none;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .projectImage {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.projectDetails {
+    padding: 25px;
 }
 
 .projectTitle {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 0 10px 0;
-    color: #1f1f1f;
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .projectDescription {
-    font-size: 14px;
-    color: #444;
-    flex: 1;
-}
-
-.projectCardFull {
-    background-color: #f0f5ef;
-    padding: 30px;
-    margin: 0 auto;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.projectImageFull {
-    width: 100%;
-    max-height: 240px;
-    object-fit: cover;
-    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.projectContentFull {
-    text-align: center;
+.viewButton {
+    display: inline-flex;
+    align-items: center;
+    color: #b67c2a;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-.projectContentFull h3 {
-    font-size: 36px;
+.viewButton:hover {
+    color: #e6a94f;
+}
+
+.arrow {
+    margin-left: 5px;
+    transition: transform 0.2s;
+}
+
+.viewButton:hover .arrow {
+    transform: translateX(3px);
+}
+
+/* Demo Card Styles */
+.demoCard {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.demoContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.demoText h3 {
+    font-size: 24px;
+    color: #1a1a1a;
     margin-bottom: 10px;
 }
 
-.projectContentFull p {
-    font-size: 16px;
-    color: #444;
-    margin-bottom: 20px;
+.demoText p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
 }
 
 .demoButton {
-    background-color: #2f4858;
+    background: #b67c2a;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 25px;
+    border-radius: 5px;
     font-size: 16px;
-    border-radius: 8px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.2s;
+    white-space: nowrap;
 }
 
 .demoButton:hover {
-    background-color: #1f333f;
+    background: #e6a94f;
 }
 
-@media screen and (max-width: 768px) {
-      .projectWrapper {
-        width: 95%;
+/* Responsive Styles */
+@media screen and (max-width: 960px) {
+    .content {
+        padding: 0 40px;
     }
 
-    .projectRowList {
+    .projectsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .demoContent {
         flex-direction: column;
+        align-items: flex-start;
         gap: 20px;
-        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        padding: 0 20px;
     }
 
-    .projectCard {
-        min-width: 100%;
-        width: 100%;
-        padding: 15px;
+    .title {
+        font-size: 32px;
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
 
-    .projectImage {
-        height: 180px;
+    .projectsGrid {
+        grid-template-columns: 1fr;
     }
 
     .projectTitle {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .projectDescription {
-        font-size: 13px;
+        font-size: 15px;
     }
 
-    .projectCardFull {
-        padding: 20px;
-        width: 100%;
+    .demoText h3 {
+        font-size: 20px;
     }
 
-    .projectImageFull {
-        max-height: 200px;
-        margin-bottom: 15px;
-    }
-
-    .projectContentFull h3 {
-        font-size: 28px;
-    }
-
-    .projectContentFull p {
-        font-size: 14px;
-        margin-bottom: 15px;
+    .demoText p {
+        font-size: 16px;
     }
 
     .demoButton {
-        padding: 10px 16px;
-        font-size: 14px;
+        width: 100%;
     }
 }

@@ -1,186 +1,208 @@
+@import "../../vars.css";
+
 .modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  backdrop-filter: blur(4px);
-  padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
 }
 
 .modalContent {
-  background-color: #ffffff;
-  padding: 30px 20px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  position: relative;
-  animation: fadeIn 0.3s ease;
-  font-family: sans-serif;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
 }
 
 .modalHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #b67c2a;
 }
 
-.modalHeader h2 {
-  font-size: 24px;
-  color: #333;
-  margin: 0;
+.modalTitle {
+    color: #f8fafc;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
 }
 
 .closeBtn {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s;
 }
 
 .closeBtn:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
+.closeIcon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
 }
 
 .inputArea {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.inputArea input {
-  flex: 1;
-  padding: 10px 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+.taskInput {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #2d2d2d;
+    color: #f8fafc;
+    font-size: 16px;
+    transition: all 0.3s;
 }
 
-.inputArea input:focus {
-  outline: none;
-  border-color: #4caf50;
-  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+.taskInput:focus {
+    outline: none;
+    border-color: #b67c2a;
+    box-shadow: 0 0 0 2px rgba(182, 124, 42, 0.3);
 }
 
-.inputArea button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.taskInput::placeholder {
+    color: #777;
 }
 
-.inputArea button:hover {
-  background-color: #45a047;
+.addButton {
+    background: #b67c2a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.addButton:hover {
+    background: #e6a94f;
 }
 
 .taskList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-.taskList li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f9f9f9;
-  padding: 10px 14px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2d2d2d;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
 }
 
-.taskList li span {
-  cursor: pointer;
-  font-size: 14px;
-  color: #333;
-  transition: color 0.2s ease;
+.taskItem:hover {
+    background: #333;
 }
 
-.taskList li span:hover {
-  color: #000;
+.taskText {
+    color: #f8fafc;
+    cursor: pointer;
+    flex: 1;
+    font-size: 16px;
+    transition: all 0.3s;
 }
 
-.taskList li .done {
-  text-decoration: line-through;
-  color: #999;
+.taskText:hover {
+    color: #b67c2a;
 }
 
-.deleteBtn {
-  background-color: #e53935;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.completed {
+    text-decoration: line-through;
+    color: #777 !important;
 }
 
-.deleteBtn:hover {
-  background-color: #c62828;
+.deleteButton {
+    background: #333;
+    color: #f8fafc;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 10px;
 }
 
-/* === Mobile Responsive === */
-@media screen and (max-width: 480px) {
-  .modalContent {
-    padding: 25px 15px;
-  }
+.deleteButton:hover {
+    background: #444;
+    border-color: #b67c2a;
+    color: #b67c2a;
+}
 
-  .modalHeader h2 {
-    font-size: 20px;
-  }
+/* Scrollbar styling */
+.taskList::-webkit-scrollbar {
+    width: 8px;
+}
 
-  .closeBtn {
-    width: 20px;
-    height: 20px;
-  }
+.taskList::-webkit-scrollbar-track {
+    background: #2d2d2d;
+    border-radius: 4px;
+}
 
-  .inputArea {
-    flex-direction: column;
-  }
+.taskList::-webkit-scrollbar-thumb {
+    background: #b67c2a;
+    border-radius: 4px;
+}
 
-  .inputArea button {
-    width: 100%;
-  }
+.taskList::-webkit-scrollbar-thumb:hover {
+    background: #e6a94f;
+}
 
-  .taskList li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .modalContent {
+        padding: 20px;
+        margin: 0 15px;
+    }
 
-  .deleteBtn {
-    align-self: flex-end;
-  }
+    .inputArea {
+        flex-direction: column;
+    }
+
+    .addButton {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .taskItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .deleteButton {
+        margin-left: 0;
+        margin-top: 8px;
+        align-self: flex-end;
+    }
 }

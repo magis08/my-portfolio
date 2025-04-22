@@ -1,131 +1,241 @@
+/* About.module.css */
 @import "../../vars.css";
 
 .container {
     position: relative;
-    background: linear-gradient(to bottom, #ffffff, #dfe3e6);
-    padding: 60px 0;
-    overflow-x: hidden;
+    background: #f8fafc;
+    padding: 80px 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  .title {
+}
+
+.title {
     color: #1a1a1a;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    font-family: var(--font-family);
-    margin-top: 50px;
-    margin-bottom: 40px;
-  }
-  
-  .content {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #b67c2a;
+    margin: 1.5rem auto 0;
+}
+
+.content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;
-    width: 100vw;
+    gap: 4rem;
+    width: 90%;
     max-width: 1400px;
     margin: 0 auto;
-  }
-  
-  .textContainer {
+}
+
+.textContainer {
     flex: 1;
     max-width: 700px;
-    padding-left: 60px;
-    padding-right: 40px;
-  }
-  
-  .subheading {
-    display: none;
-    font-size: 36px;
-    color: var(--color-text);
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 24px;
-    color: var(--color-text);
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: justify;
-  }
-  
-  .aboutImage {
-    height: 80vh;
-    width: auto;
-    margin-top: -100px;
-    max-width: 50vh;
-    object-fit: cover;
-    border-radius: 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  }
+}
 
-  @media screen and (max-width: 960px) and (min-width: 500px) {
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .aboutImage {
-        height: 40vh;
-        width: auto;
-        margin-top: 0;
-        max-width: 50vh;
-        object-fit: cover;
-        border-radius: 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
-  
-    .textContainer {
-      max-width: 100%;
-    }
-  
-    .title {
-      text-align: center;
-      width: 100%;
-      margin-left: 0;
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 36px;
-      display: block;
-    }
-  
-    .subheading, .description {
-      text-align: center;
-      font-size: 20px;
-    }
-  }
+.subheading {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
 
-  @media screen and (max-width: 900px) {
+.highlight {
+    color: #b67c2a;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.skillsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.skillCard {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.skillHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(182, 124, 42, 0.2);
+}
+
+.skillIcon {
+    width: 28px;
+    height: 28px;
+}
+
+.skillTitle {
+    font-size: 1.3rem;
+    color: #b67c2a;
+    margin: 0;
+}
+
+.skillList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skillList li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+    padding-left: 1.8rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.skillList li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #b67c2a;
+}
+
+.skillName {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.currentLearning {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(182, 124, 42, 0.08);
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.learningIcon {
+    width: 32px;
+    height: 32px;
+}
+
+.imageSection {
+    position: relative;
+    width: 40%;
+    max-width: 500px;
+}
+
+.aboutImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+    border: 3px solid white;
+}
+
+.quoteCard {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 300px;
+}
+
+.quoteContent {
+    font-size: 1rem;
+    color: #333;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.quoteAuthor {
+    font-size: 0.9rem;
+    color: #b67c2a;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
     .content {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        gap: 3rem;
     }
-  
-    .aboutImage {
-        display: none;
+    
+    .imageSection {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
-  
-    .textContainer {
-      max-width: 100%;
+    
+    .quoteCard {
+        right: 0;
+        bottom: -30px;
     }
-  
+}
+
+@media (max-width: 768px) {
     .title {
-      text-align: center;
-      width: 100%;
-      margin-left: 0;
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 36px;
-      display: block;
+        font-size: 2.2rem;
     }
-  
-    .subheading, .description {
-      text-align: center;
-      font-size: 20px;
+    
+    .subheading {
+        font-size: 1.6rem;
     }
-  }
-  
+    
+    .skillsContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 60px 0;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    .quoteCard {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+}

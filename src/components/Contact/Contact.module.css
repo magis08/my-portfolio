@@ -59,3 +59,15 @@
     object-fit: contain;
     flex-shrink: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .content h2 {
+        font-size: 30px;
+        text-align: justify;
+    }
+
+    .content p {
+        font-size: 15px;
+        text-align: justify;
+    }
+}
