@@ -1,206 +1,200 @@
 @import "../../vars.css";
 
 .container {
-    position: relative;
-    background: #f8fafc;
-    padding: 60px 0;
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  position: relative;
+  background: #f8fafc;
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    color: #1a1a1a;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    font-family: var(--font-family);
-    margin-top: 50px;
-    margin-bottom: 40px;
-    text-align: center;
-    position: relative;
+  color: #1a1a1a;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #b67c2a;
-    margin: 20px auto 0;
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #b67c2a;
+  margin: 20px auto 0;
 }
 
 .content {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    width: 100vw;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
 }
 
 .sectionHeading {
-    font-size: 36px;
-    color: #1a1a1a;
-    margin-bottom: 30px;
-    font-weight: 600;
-    border-bottom: 2px solid #b67c2a;
-    padding-bottom: 5px;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-weight: 600;
+  border-bottom: 2px solid #b67c2a;
+  padding-bottom: 5px;
 }
 
 .experienceContainer,
 .educationContainer {
-    flex: 1;
-    background: #ffffff;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
+  flex: 1;
+  background: #ffffff;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
 }
 
 .historyItem,
 .educationItem {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
 }
 
 .historyItem:last-child,
 .educationItem:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .logoContainer {
-    flex-shrink: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .companyLogo,
 .schoolLogo {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
 .historyContent,
 .educationContent {
-    flex: 1;
+  flex: 1;
 }
 
 .historyContent h4,
 .educationContent h4 {
-    font-size: 22px;
-    color: #1a1a1a;
-    margin-bottom: 5px;
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 5px;
 }
 
 .date {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 15px;
-    font-style: italic;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+  font-style: italic;
 }
 
 .experienceList,
 .descriptionList {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .experienceListItem,
 .descriptionListItem {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-    line-height: 1.5;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.5;
 }
 
 .bullet {
-    position: absolute;
-    left: 0;
-    color: #b67c2a;
+  position: absolute;
+  left: 0;
+  color: #b67c2a;
 }
 
 @media screen and (max-width: 960px) {
-    .content {
-        flex-direction: column;
-        padding: 0 40px;
-        gap: 30px;
-    }
+  .content {
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 30px;
+  }
 
-    .title {
-        font-size: 36px;
-    }
+  .title {
+    font-size: 36px;
+  }
 
-    .sectionHeading {
-        font-size: 28px;
-    }
+  .sectionHeading {
+    font-size: 28px;
+  }
 
-    .historyContent h4,
-    .educationContent h4 {
-        font-size: 20px;
-    }
+  .historyContent h4,
+  .educationContent h4 {
+    font-size: 20px;
+  }
 
-    .experienceListItem,
-    .descriptionListItem {
-        font-size: 16px;
-    }
+  .experienceListItem,
+  .descriptionListItem {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .content {
-        padding: 0 20px;
-    }
+  .content {
+    padding: 0 20px;
+  }
 
-    .title {
-        font-size: 32px;
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
+  .title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
 
-    .sectionHeading {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
+  .sectionHeading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 
-    .historyItem,
-    .educationItem {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .historyItem,
+  .educationItem {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .logoContainer {
-        width: 50px;
-        height: 50px;
-    }
+  .logoContainer {
+    width: 50px;
+    height: 50px;
+  }
 
-    .historyContent h4,
-    .educationContent h4 {
-        font-size: 18px;
-    }
+  .historyContent h4,
+  .educationContent h4 {
+    font-size: 18px;
+  }
 
-    .date {
-        font-size: 16px;
-    }
+  .date {
+    font-size: 16px;
+  }
 
-    .experienceListItem,
-    .descriptionListItem {
-        font-size: 15px;
-    }
+  .experienceListItem,
+  .descriptionListItem {
+    font-size: 15px;
+  }
 }
