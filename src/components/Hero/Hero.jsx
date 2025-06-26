@@ -8,10 +8,10 @@ export const Hero = () => {
             <div className={styles.content}>
                 <h1 className={styles.title}>
                     Hi. I'm <span className={styles.primaryName}>Agis.</span>
-                    <br />A Full-Stack Developer
+                    <br />Mechatronics Graduate & Software Developer
                 </h1>
                 <p className={styles.description}>
-                    with a Mechatronics background — building clean, user-focused apps using JavaScript and React.
+                Experienced engineer with over 5 years in field service and manufacturing. Recently expanded into full-stack web development, combining hands-on engineering with digital solutions.
                 </p>
                 <div className={styles.quickContact}>
                     <a href="mailto:agis7766@gmail.com">

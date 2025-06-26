@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import { getImageUrl } from '../../utils';
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const navigate = useNavigate(); // Inisialisasi navigate
+    const navigate = useNavigate();
 
-    // Fungsi untuk navigasi dan scroll ke section
     const handleNavigateAndScroll = (sectionId) => {
-        // Pindah ke homepage dan kirim intent untuk scroll ke section
         navigate("/", { state: { scrollTo: sectionId } });
         setMenuOpen(false);
     };

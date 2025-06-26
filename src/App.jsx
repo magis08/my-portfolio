@@ -14,7 +14,6 @@ import { Contact } from "./components/Contact/Contact";
 function App() {
   const location = useLocation();
 
-  // useEffect untuk menangani scroll otomatis setelah pindah halaman
   useEffect(() => {
     if (location.pathname === "/" && location.state?.scrollTo) {
       const targetId = location.state.scrollTo;

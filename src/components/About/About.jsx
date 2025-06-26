@@ -9,14 +9,12 @@ export const About = () => {
             <div className={styles.content}>
                 <div className={styles.textContainer}>
                     <h3 className={styles.subheading}>
-                        From <span className={styles.highlight}>Mechatronics</span> to <span className={styles.highlight}>Full-Stack Development</span>
+                        From <span className={styles.highlight}>Mechatronics</span> to <span className={styles.highlight}>Software Developer</span>
                     </h3>
                     
                     <p className={styles.description}>
-                        As a former <strong>mechatronics engineer</strong> turned <strong>full-stack developer</strong>, 
-                        I bring a unique blend of analytical problem-solving and creative coding skills to build 
-                        robust web applications. My engineering background gives me a systems-thinking approach 
-                        to development.
+                    I have 5+ years of experience in engineering, mainly as a field engineer and in manufacturing. Recently, 
+                    I've added full-stack development to my skill set, allowing me to approach challenges from both industrial and digital perspectives.
                     </p>
                     
                     <div className={styles.skillsContainer}>
