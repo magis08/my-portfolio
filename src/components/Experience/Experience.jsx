@@ -10,7 +10,6 @@ export const Experience = () => {
             <h2 className={styles.title}>Career</h2>
 
             <div className={styles.content}>
-                {/* Left column: Experience */}
                 <div className={styles.experienceContainer}>
                     <h3 className={styles.sectionHeading}>Work Experiences</h3>
                     <ul className={styles.history}>
@@ -44,7 +43,6 @@ export const Experience = () => {
                     </ul>
                 </div>
 
-                {/* Right column: Education */}
                 <div className={styles.educationContainer}>
                     <h3 className={styles.sectionHeading}>Education</h3>
                     <ul className={styles.education}>

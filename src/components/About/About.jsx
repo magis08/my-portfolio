@@ -9,15 +9,26 @@ export const About = () => {
             <div className={styles.content}>
                 <div className={styles.textContainer}>
                     <h3 className={styles.subheading}>
-                        From <span className={styles.highlight}>Mechatronics</span> to <span className={styles.highlight}>Software Developer</span>
+                        Bridging <span className={styles.highlight}>Mechatronics</span> and <span className={styles.highlight}>Software Engineering</span>
                     </h3>
-                    
+
                     <p className={styles.description}>
-                    I have 5+ years of experience in engineering, mainly as a field engineer and in manufacturing. Recently, 
-                    I've added full-stack development to my skill set, allowing me to approach challenges from both industrial and digital perspectives.
+                        I have 5+ years of experience in engineering, mainly as a field engineer and in manufacturing. Recently,
+                        I've added full-stack development to my skill set, allowing me to approach challenges from physical systems and digital solutions.
                     </p>
-                    
+
                     <div className={styles.skillsContainer}>
+                        <div className={styles.skillCard}>
+                            <div className={styles.skillHeader}>
+                                <img src={getImageUrl("skills/engineering.png")} alt="Engineering" className={styles.skillIcon} />
+                                <h4 className={styles.skillTitle}>Engineering</h4>
+                            </div>
+                            <ul className={styles.skillList}>
+                                <li><span className={styles.skillName}>Troubleshooting</span> - Diagnosing and resolving machine</li>
+                                <li><span className={styles.skillName}>Preventive Maintenance</span> - Planning and executing scheduled maintenance</li>
+                                <li><span className={styles.skillName}>Industrial</span> - PLC, sensors, mechatronics component</li>
+                            </ul>
+                        </div>
                         <div className={styles.skillCard}>
                             <div className={styles.skillHeader}>
                                 <img src={getImageUrl("skills/skills.gif")} alt="Frontend" className={styles.skillIcon} />
@@ -54,11 +65,11 @@ export const About = () => {
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div className={styles.currentLearning}>
                         <img src={getImageUrl("skills/learning.gif")} alt="Learning" className={styles.learningIcon} />
                         <p>
-                            Currently mastering <strong>Next.js</strong> and <strong>TypeScript</strong> to build 
+                            Currently mastering <strong>Next.js</strong> and <strong>TypeScript</strong> to build
                             more performant and type-safe applications.
                         </p>
                     </div>
