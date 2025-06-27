@@ -3,7 +3,7 @@
         "id": 1,
         "title": "PostgreSQL BREADS, Pagination, and Authentication",
         "description": "This project implements an authentication process with BREADS functionality using ExpressJS, EJS, and a PostgreSQL database, complete with pagination features. The user interface is built using HTML and CSS.",
-        "imageSrc": "projects/postgre-breads/login.png",
+        "imageSrc": "projects/postgre-breads/postgre.png",
         "screenshots" : [
             "projects/postgre-breads/login.png",
             "projects/postgre-breads/postgresql-breads.png",
@@ -20,7 +20,7 @@
         "id": 2,
         "title": "MongoDB Async BREADS",
         "description": "This project involves building an API using ExpressJS with a MongoDB database and BREADS functionality, featuring pagination implemented asynchronously with vanilla JavaScript and jQuery.",
-        "imageSrc": "projects/mongodb-breads/mongodb-breads.png",
+        "imageSrc": "projects/mongodb-breads/Mongodb.png",
         "screenshots": [
             "projects/mongodb-breads/mongodb-breads.png",
             "projects/mongodb-breads/1.png",
@@ -40,9 +40,9 @@
     },
     {
         "id": 3,
-        "title": "Phonebook",
+        "title": "Phonebook React",
         "description": "This project involves creating a phonebook application to store names, phone numbers, and photos of individuals. The application features BREADS functionality and includes pagination. The frontend is built using React.",
-        "imageSrc": "projects/react-phonebook/phonebook.png",
+        "imageSrc": "projects/react-phonebook/react-pb.png",
         "screenshots": [
             "projects/react-phonebook/phonebook.png",
             "projects/react-phonebook/1.png",
